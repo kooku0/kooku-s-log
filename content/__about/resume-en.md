@@ -1,13 +1,13 @@
 ---
 title: 'about'
 date: 2019-1-27 16:21:13
-lang: 'en'
+lang: 'ko'
 ---
 
-# Your name
+# Gu Min-Gyu
 
 <div align="center">
 
-_Thank you for reading my resume. If you want to contact me, Please send me an email._
+_멋진 코드를 짜기위해 노력하는 프로그래머입니다._
 
 </div>

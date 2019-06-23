@@ -1,7 +1,7 @@
 ---
 title: Elasticsearch and Node.js
 date: 2019-06-23 18:06:91
-category: Elasticsearch
+category: elasticsearch
 ---
 
 > Elasticsearch 와 Node.js를 연동(?)해본다.
