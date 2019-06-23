@@ -1,12 +1,12 @@
 module.exports = {
   title: `Kooku.io`,
-  description: `Blog posted about ...`,
+  description: `개발노트`,
   author: `Kooku`,
-  introduction: `I explain with words and code. I explain with words and code. I explain with words and code.`,
+  introduction: `개발노트 + 일기장`,
   siteUrl: `https://kooku.netlify.com`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
-    github: `https://github.com/koomg9599`, // Your GitHub account
+    github: `koomg9599`, // Your GitHub account
     medium: ``, // Your Medium account
     facebook: ``, // Your Facebook account
   },
