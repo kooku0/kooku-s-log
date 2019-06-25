@@ -8,7 +8,7 @@ category: elasticsearch
 > 따라서  Elastic에 관한 공부를 하면서 정리를 하고자한다.
 > 관한 내용은 [elastic](https://www.elastic.co) 공식 사이트를 참고하였다.
 
-<img src="./images/logo.svg" width="300pt">
+<img src="./images/logo.jpg" width="300pt">
 
 ## 1. Elastic: Product Portfolio
 

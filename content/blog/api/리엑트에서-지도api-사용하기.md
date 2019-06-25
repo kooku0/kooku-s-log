@@ -12,7 +12,7 @@ category: api
 
 우선 네이버 지도 api를 사용하려고 하였으나 
 
-<img src="./images/navermapchange.png" style='width: 500px;'/>
+<img src="./images/navermapchange.jpg" style='width: 500px;'/>
 
 네이버 클라우드 플랫폼에서 신규 계정을 발급받아 사용하여야하였다. 
 
@@ -20,9 +20,9 @@ category: api
 
 <img src="./images/navermap.png" style='width: 400px;'/>
 
-<img src=./images/navermapcash.png" style='width: 400px;'/>
+<img src="./images/navermapcash.png" style='width: 400px;'/>
 
-<img src="D:/WebStudy/WebStudy/6.Using_MapApi_in_React/img/application.png" style='width: 400px;'/>
+<img src="./images/application.png" style='width: 400px;'/>
 
 우선 네이버 클라우드 플랫폼에서 신규계정을 발급받으려면 카드등록을 해야한다. 한도도 정할 수 있긴한데, 프로젝트를 완성하고 기업에게 줘야하는 입장이라 별로 사용하고 싶지 않았다. 
 
@@ -138,7 +138,7 @@ export default App;
 
 네이버 지역 api의 경우 다음과 같이 카텍좌표계 값으로 주기때문에 다음 지도에 그대로 넣어주게 되면 안된다.
 
-<img src="D:/WebStudy/WebStudy/6.Using_MapApi_in_React/img/mapxy.png" style='width: 500px'/>
+<img src="./images/mapxy.png" style='width: 500px'/>
 
 이때 좌표를 변환해주는 작업이 필요하다.
 
