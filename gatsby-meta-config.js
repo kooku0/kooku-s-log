@@ -1,5 +1,5 @@
 module.exports = {
-  title: `Kooku.io`,
+  title: `Kooku's log`,
   description: `개발노트`,
   author: `Kooku`,
   introduction: `개발노트 + 일기장`,
@@ -14,7 +14,7 @@ module.exports = {
   keywords: [`blog`],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
-    utterances: 'koomg9599/kooku.io', // Your repository for archive comment
+    utterances: 'koomg9599/kooku-s-log', // Your repository for archive comment
   },
   configs: {
     countOfInitialPost: 10, // Config your initial count of post
