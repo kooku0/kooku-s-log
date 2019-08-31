@@ -34,5 +34,20 @@
 }
 
 .category-container::-webkit-scrollbar {
-  display: none; // Safari and Chrome
+  height: 8px;
+}
+
+.category-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+.category-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 6px;
+}
+
+.category-container::-webkit-scrollbar-thumb:hover {
+  background: #999;
+  border-radius: 6px;
 }
