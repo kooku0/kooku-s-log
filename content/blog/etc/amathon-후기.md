@@ -8,11 +8,11 @@ category: etc
 
 서울에서의 인턴생활을 끝내고 이제 부산으로 내려가야할 시간이 돌아왔다.
 
-내려가기전에 [Amathon](https://amathon.ga/)이라는 해커톤에 참여하게 되었다.
+내려가기전에 [Amathon](https://amathon.ga/)이라는 해커톤에 참여하게 되었는데, 그 이야기를 해보고자 한다.
 
 <img src="./images/amathon cover.jpg"/>
 
-참여하기로 생각한 이유는 총 4가지로 다음과 같다.
+내가 아마톤에 참여하기로 생각한 이유는 총 4가지로 다음과 같다.
 
 1. AWS와 관련있다는 말 한마디가 흥미를 끔
 2. 대학생 중의 마지막 해커톤을 해보자
@@ -23,17 +23,19 @@ category: etc
 
 서울에서의 마지막은 Amathon과 함께
 
-<img src="./images/amathon01.jpg"/>
+<img src="./images/amathon01.jpg" height="500px"/>
 
-<img src="./images/amathon03.jpg"/>
+
+
+<img src="./images/amathon03.jpg" height="500px"/>
 
 굿즈
 
-<img src="./images/amathon04.jpg"/>
+<img src="./images/amathon04.jpg" width="400px"/>
 
 7팀 Youtube Creator를 위한 댓글 추첨 사이트
 
-<img src="./images/amathon02.jpg"/>
+<img src="./images/amathon02.jpg" width="400px"/>
 
 
 
@@ -42,6 +44,18 @@ category: etc
 ### repository
 
 https://github.com/amathon-2019/YoutubeCreator
+
+### screenshot
+
+main 화면
+
+<img src='./images/amathon06.jpg' width="400px"/>
+
+영상링크 입력시 해당 동영상을 iframe으로 뿌려주고, 정보를 api로 받아와 보여준다.
+
+<img src='./images/amathon05.jpg' width="400px"/>
+
+
 
 ## 일기
 
@@ -61,6 +75,6 @@ https://github.com/amathon-2019/YoutubeCreator
 
 마지막날.. 결과물은 참혹했고 팀원들 모두 의욕은 바닥난 상태ㅠㅠ
 
-결과물은 좋지 않았지만 AWS에 대해 배운것들이 많았다. 우리팀은 AWS EC2에서 Tocat에 Spring을 올리고 Nginx에 react build file을 올려 서브하였다. 그런데 static file의 경우 Nginx가 아닌 S3에 올리면 더욱 좋을 것 같다는 말도 들었고, Serverless를 적용해보는것도 좋을 것 같다는 말을 들었다. AWS에서 EC2만 알고 있었던 나는 AWS에서 생각보다 훨씬 많은 것들을 제공하는걸 알게되었다.
+결과물은 좋지 않았지만 AWS에 대해 배운것들이 많았다. 우리팀은 AWS EC2에서 Tocat에 Spring을 올리고 Nginx로 front build file을 올려 서브하였다. 그런데 static file의 경우 Nginx가 아닌 S3에 올리면 더욱 좋을 것 같다는 말도 들었고, Serverless를 적용해보는것도 좋을 것 같다는 말을 들었다. AWS에서 EC2만 알고 있었던 나는 AWS에서 생각보다 훨씬 많은 것들을 제공하는걸 알게되었다.
 
 특히 Serverless에 대해서 예전부터 공부를 해보고싶었는데 이번기회에 공부를 해봐야겠다는 생각이 굳혀졌다.
