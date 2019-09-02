@@ -1,5 +1,5 @@
 ---
-title: 리엑트에서 지도API 사용하기
+title: 리액트에서 지도API 사용하기
 date: 2019-06-23 19:06:03
 category: api
 ---
