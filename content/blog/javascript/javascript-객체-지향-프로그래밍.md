@@ -1,5 +1,5 @@
 ---
-title: JavaScript 객체 지향 프로그래밍
+title: javascript 객체 지향 프로그래밍
 date: 2019-06-30 23:06:84
 category: javascript
 ---
@@ -253,7 +253,7 @@ function PersonPlus(name, first, second, third) {
     Person.call(this, name, first, second);
     this.third = third;
 }
-// PersonPlus.prototype.__proto__ = PErson.prototype; // 비표준이다.
+// PersonPlus.prototype.__proto__ = Person.prototype; // 비표준이다.
 PersonPlus.prototype = Object.create(Person.prototype); // 새로운 객체의 Person을 만든다.
 PersonPlus.prototype.constructor = PersonPlus; // constructor만 다시 PersonPlus로 바꾸어 준다.
 
