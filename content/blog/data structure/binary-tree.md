@@ -42,6 +42,110 @@ category: data structure
 
 최악: O(N)
 
+### Binary Tree 구현 (C++)
+
+```c++
+#include <iostream>
+#include <queue>
+#include <stack>
+
+using namespace std;
+
+class Node {
+	friend class BinaryTree;
+private:
+	int data;
+	Node *left;
+	Node *right;
+public:
+	Node(int _data) {
+		this->data = _data;
+	}
+	int getData() {
+		return this->data;
+	}
+};
+
+class BinaryTree {
+private:
+	Node *root;
+public:
+	Node* getRoot() {
+		return this->root;
+	}
+	void insert(int _data) {
+		Node** node = &root;
+		while (1) {
+			if (*node == NULL) {
+				*node = new Node(_data);
+				return;
+			}
+			int nodeData = (*node)->data;
+			if (nodeData > _data) {
+				node = &(*node)->left;
+			}
+			else if (nodeData < _data) {
+				node = &(*node)->right;
+			}
+			else {
+				return;
+			}
+		}
+	}
+	void BFS() {
+		queue<Node*> q;
+		q.push(root);
+		while (!q.empty()) {
+			Node *node = q.front();
+			q.pop();
+			Node *leftNode = node->left;
+			Node *rightNode = node->right;
+			if (leftNode != NULL) q.push(leftNode);
+			if (rightNode != NULL) q.push(rightNode);
+			cout << node->getData() << " ";
+		}
+	}
+	void DFS() {
+		stack<Node*> s;
+		s.push(root);
+		while (!s.empty()) {
+			Node* node = s.top();
+			s.pop();
+			if (node == NULL) {
+				continue;
+			}
+			s.push(node->right);
+			s.push(node->left);
+			cout << node->getData() << " ";
+		}
+	}
+};
+
+
+
+int main() {
+	BinaryTree* tree = new BinaryTree();
+
+	tree->insert(5);
+	tree->insert(1);
+	tree->insert(2);
+	tree->insert(3);
+	tree->insert(4);
+	tree->insert(5);
+	tree->insert(6);
+	tree->insert(7);
+	cout << "BFS" << endl;
+	tree->BFS();
+	cout << endl;
+	cout << "DFS" << endl;
+	tree->DFS();
+	cout << endl;
+	return 0;
+}
+```
+
+
+
 ### reference
 
 * [이진트리:: 위키백과](https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%A7%84_%ED%8A%B8%EB%A6%AC)
