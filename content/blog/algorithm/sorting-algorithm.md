@@ -108,7 +108,7 @@ void selectionSort(int list[], int listSize) {
 
 ### 3. 삽입 정렬 (Insertion Sort)
 
-![íì¼:external/upload.wikimedia.org/Insertion-sort-example-300px.gif](https://w.namu.la/s/e2cca975b1e03bd676ae5e11433526429e9cf77953039ca19a2df4b1112eb75c9c45701ca4f75bcb78194f07ec7b60f28040a4bae7ceed58729887ff62fc13f641682dd0a76feac03e643811437a0c40f3c53b338e965e5dd6c271d7a4064bdf)
+<img src='https://w.namu.la/s/e2cca975b1e03bd676ae5e11433526429e9cf77953039ca19a2df4b1112eb75c9c45701ca4f75bcb78194f07ec7b60f28040a4bae7ceed58729887ff62fc13f641682dd0a76feac03e643811437a0c40f3c53b338e965e5dd6c271d7a4064bdf' />
 
 k번째 원소를 1부터 k-1까지와 비교해 적절한 위치에 끼워넣고 그 뒤의 자료를 한 칸씩 뒤로 밀어내는 방식으로, 평균적으로 O(n^2)중 빠른 편이나 자료구조에 따라선 뒤로 밀어내는데 걸리는 시간이 크며, 앞의 예시처럼 작은 게 뒤쪽에 몰려있으면 그야말로 헬게이트입니다.
 
@@ -149,7 +149,7 @@ void insertionSort(int list[], int listSize){
 
 ## 4. 합병 정렬 (Merge Sort)
 
-![íì¼:external/upload.wikimedia.org/Merge-sort-example-300px.gif](https://ww.namu.la/s/30bb5bb955f72d8a4b70c88e0cb83fe97ae0c349bd9c27d1204e8939df903ef7748c25b1928455ad76d70fd7a283b1c131feecabca2fe5a9c36b4ab72fe3e778320db817cf709f625c4132640aee1d47aca18f0bd40ac09a7f95c78db18c05b4)
+<img src='https://ww.namu.la/s/30bb5bb955f72d8a4b70c88e0cb83fe97ae0c349bd9c27d1204e8939df903ef7748c25b1928455ad76d70fd7a283b1c131feecabca2fe5a9c36b4ab72fe3e778320db817cf709f625c4132640aee1d47aca18f0bd40ac09a7f95c78db18c05b4' />
 
 개발자는 [존 폰 노이만](https://namu.wiki/w/%EC%A1%B4%20%ED%8F%B0%20%EB%85%B8%EC%9D%B4%EB%A7%8C)으로 원소 개수가 1 또는 0이 될 때까지 두 부분으로 쪼개고 쪼개서 자른 순서의 역순으로 크기를 비교해 병합해 나갑니다. 병합된 부분 안은 이미 정렬되어 있으므로 전부 비교하지 않아도 제자리를 찾을 수 있습니다. 대표적인 분할 정복 알고리즘으로 존 폰 노이만의 천재성을 엿볼 수 있는 알고리즘입니다.
 
