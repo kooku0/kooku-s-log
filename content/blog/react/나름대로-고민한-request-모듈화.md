@@ -34,7 +34,8 @@ HttpRequest
 
 당연히 이렇게 나눌때는 TypeScript를 사용하는게 좀 더 깔끔하기에 사용하였습니다.
 
+> ES6에 대한 자비는 없습니다.
+
 ### 아직 작성중..
 
 <https://github.com/koomg9599/react-request-module>
-
