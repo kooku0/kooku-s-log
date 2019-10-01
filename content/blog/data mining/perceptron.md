@@ -14,7 +14,7 @@ category: data mining
 
 number-recognition-system by perceptron
 
-<img src="./images/Single-Perceptron.png.webp" width='500px'/>
+<img src="./images/perceptron_schematic_overview.png" width='500px'/>
 
 ## Data set
 
