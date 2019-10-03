@@ -1,7 +1,7 @@
 ---
 title: 나름대로 고민한 request 모듈화
 date: 2019-09-30 12:09:71
-category: react
+category: etc
 ---
 
 며칠 전 Spring 서버 개발자 친구의 코드를 보고 잠깐 고민에 빠진적이 있습니다. 저는 보통 request 함수를 따로 빼서 요청하는 값에 따라 구분해서 사용하는데 이 개발자 친구는 완전히 모듈화 하여 사용했습니다. 예를 들어보자면 저는 다음과 같이 작성했다면
@@ -34,9 +34,13 @@ HttpRequest
 
 당연히 이렇게 나눌때는 TypeScript를 사용하는게 좀 더 깔끔하기에 사용하였습니다.
 
-> ES6에 대한 자비는 없습니다.
+> Explore에 대한 자비는 없습니다.
 
-Complete!
+Refectoring~
+
+코드가 깔끔하지 않아 계속 수정하고 있습니다.
+
+좋은 코드를 짜는 건 어렵네요.
 
 ## Http Request Module
 
@@ -90,29 +94,37 @@ class HttpRequest {
   private baseUrl: string
   private query: string
 
-  constructor(url: string, httpMethod: THttpMethod, options?: IOptions) {
+  constructor(
+    requestUrl: string,
+    httpMethod: THttpMethod,
+    options?: IOptions,
+    errorFunction?: Function,
+  ) {
     this.baseUrl =
       process.env.NODE_ENV === 'development' ? 'http://localhost:4000' : 'http://google.com'
-    this.url = url
+    this.url = requestUrl
     this.method = httpMethod
     this.query = ''
     if (options) {
-      this.header = new HttpRequestHeader(options['headers'])
-      this.body = new HttpRequestBody(options['body'])
-      if (options.params) {
-        const params = options.params
-        this.query =
-          '?' +
-          Object.keys(params)
-            .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(params[k]))
-            .join('&')
-      }
+      this.setOptions(options)
     } else {
       this.header = new HttpRequestHeader()
       this.body = new HttpRequestBody()
     }
     this.xhttp = new XMLHttpRequest()
-    this.errorHandler = null
+    this.errorHandler = errorFunction || null
+  }
+  private setOptions(options: Object) {
+    this.header = new HttpRequestHeader(options['headers'])
+    this.body = new HttpRequestBody(options['body'])
+    const params = options['params']
+    return (this.query = params ? this.parseParams(params) : '')
+  }
+  private parseParams(params: Object) {
+    const queryString = Object.keys(params)
+      .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(params[k]))
+      .join('&')
+    return '?' + queryString
   }
   public setBaseUrl(baseUrl: string) {
     this.baseUrl = baseUrl
@@ -138,35 +150,39 @@ class HttpRequest {
   public setErrorHandler(errorHandler: Function) {
     this.errorHandler = errorHandler
   }
-  public sendData() {
-    const { xhttp, method, baseUrl, url, body, errorHandler, header, query } = this
-    function setHeaderInXMLHttpRequest() {
-      xhttp.setRequestHeader('Content-Type', 'application/json')
-      const headers = header.getHeader()
-      for (let key in headers) {
-        xhttp.setRequestHeader(key, headers[key])
-      }
+  private setHeaderAtXMLHttpRequest() {
+    this.xhttp.setRequestHeader('Content-Type', 'application/json')
+    const headers = this.header.getHeader()
+    for (let key in headers) {
+      this.xhttp.setRequestHeader(key, headers[key])
     }
-    return new Promise((resolve, reject) => {
-      xhttp.open(method, baseUrl + url + query, true)
-      setHeaderInXMLHttpRequest()
-      xhttp.send(body.getBody())
-      xhttp.onreadystatechange = () => {
-        const { readyState, status, response } = xhttp
-        if (readyState === XMLHttpRequest.DONE) {
-          if (status === 200) {
-            resolve(response)
-          } else {
-            errorHandler ? errorHandler(status) : null
-            reject('Promise Error')
-          }
+  }
+  private requestCallBack(resolve: any, reject: any) {
+    this.xhttp.onreadystatechange = () => {
+      const { readyState, status, response } = this.xhttp
+      if (readyState === XMLHttpRequest.DONE) {
+        if (status === 200) {
+          resolve(response)
+        } else {
+          this.errorHandler ? this.errorHandler(status) : null
+          reject('Promise Error')
         }
       }
+    }
+  }
+  public sendData(): Promise<JSON | Error | undefined | null> {
+    const { xhttp, method, baseUrl, url, body, query } = this
+    xhttp.open(method, baseUrl + url + query, true)
+    this.setHeaderAtXMLHttpRequest()
+    return new Promise((resolve, reject) => {
+      xhttp.send(body.getBody())
+      this.requestCallBack(resolve, reject)
     })
   }
 }
 
 export default HttpRequest
+
 ```
 
 <https://github.com/koomg9599/react-request-module>
