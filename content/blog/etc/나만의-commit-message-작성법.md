@@ -1,10 +1,10 @@
 ---
-title: 커밋 메세지 작성법
+title: 나만의 commit message 작성법
 date: 2019-10-03 07:10:59
 category: etc
 ---
 
-Git을 사용하면서 Commit message를 적을때 항상 머뭇거리곤 합니다. 과연 잘 작성했는지 혹시 라도 잘못 작성하여 쪽팔림을 당하진 않을까? 등등
+Git을 사용하면서 Commit message를 적을때 항상 머뭇거리곤 합니다. 과연 잘 작성했는지 혹시라도 잘못 작성하여 쪽팔림을 당하진 않을까? 등등
 
 영어능력이 떨어지는 저는 커밋 메세지 작성하는게 여간 힘든게 아니더군요.
 
@@ -158,6 +158,10 @@ Related to: #48, #45
 | 🏦     | `:bank:`           | **일반 데이터베이스** 별 (마이그레이션, 스크립트, 확장명 등) |
 | 🐳     | `:whale:`          | **도커** 구성                                                |
 | 🤝     | `:handshake:`      | **파일을 병합** 할 때                                        |
+
+## 다음으로 볼 내용
+
+[협업할 때 사용하는 Commitlint-bot](https://kooku.netlify.com/etc/%ed%98%91%ec%97%85%ed%95%a0+%eb%95%8c+%ec%82%ac%ec%9a%a9%ed%95%98%eb%8a%94+Commitlint-bot)
 
 ### Reference
 
