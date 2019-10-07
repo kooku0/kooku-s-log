@@ -161,7 +161,7 @@ Related to: #48, #45
 
 ## 다음으로 볼 내용
 
-[협업할 때 사용하는 Commitlint-bot](https://kooku.netlify.com/etc/%ed%98%91%ec%97%85%ed%95%a0+%eb%95%8c+%ec%82%ac%ec%9a%a9%ed%95%98%eb%8a%94+Commitlint-bot)
+[협업할 때 사용하는 Commitlint-bot](https://kooku.netlify.com/etc/%ED%98%91%EC%97%85%ED%95%A0%20%EB%95%8C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-commitlint-bot/)
 
 ### Reference
 
