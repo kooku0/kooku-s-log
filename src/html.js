@@ -16,6 +16,11 @@ export default class HTML extends React.Component {
             name="google-site-verification"
             content="EFWY1tFw9rE53Le49JwUBZA-f199rj7MRsUQMRBT-jo"
           />
+          <script
+            data-ad-client="ca-pub-5538700590606443"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          ></script>
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
