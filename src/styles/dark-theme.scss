@@ -52,7 +52,7 @@ body.dark {
       color: $dark-middle-font-color;
     }
     &:hover {
-      text-shadow: $dark-hover-text-shadow;
+      background-color: $dark-hover-background-color;
     }
   }
 
@@ -82,5 +82,13 @@ body.dark {
       background-color: $navigator-background-color;
       color: $navigator-text-color;
     }
+  }
+
+  .post-title > time {
+    color: $dark-post-time-color;
+  }
+
+  .thumbnail-date {
+    color: $dark-post-time-color;
   }
 }

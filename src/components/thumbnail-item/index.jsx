@@ -1,14 +1,14 @@
 import React, { useMemo } from 'react'
 import { Link } from 'gatsby'
 import { TARGET_CLASS } from '../../utils/visible'
-import { divideDateAndPath } from '../../utils/frontmatter'
+//import { divideDateAndPath } from '../../utils/frontmatter'
 
 import './index.scss'
 
 export const ThumbnailItem = ({ node }) => {
-  const [date, path] = useMemo(() => divideDateAndPath(node.fields.slug), [
-    node,
-  ])
+  const date = useMemo(() => node.frontmatter.date, [node])
+  const path = useMemo(() => node.fields.slug, [node])
+
   return (
     <Link className={`thumbnail ${TARGET_CLASS}`} to={path}>
       <article key={node.fields.slug}>
