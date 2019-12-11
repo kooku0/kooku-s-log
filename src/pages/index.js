@@ -86,6 +86,10 @@ export default ({ data, location }) => {
         count={count}
         category={category}
       />
+      <script
+        type="text/javascript"
+        src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5df0a456557d7ce9"
+      ></script>
     </Layout>
   )
 }
