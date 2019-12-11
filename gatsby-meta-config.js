@@ -2,7 +2,7 @@ module.exports = {
   title: `Kooku's log`,
   description: `개발노트`,
   author: `Kooku`,
-  introduction: `개발노트 + 일기장`,
+  introduction: `나의 일기장, 나의 개발노트, 심심해서 하는 블로그`,
   siteUrl: `https://kooku.netlify.com`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
