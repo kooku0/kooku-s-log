@@ -79,3 +79,30 @@ export default App
 
 react hooks를 사용하지 않았다면 setState를 이용했어야하는 작업이 모듈화를 통해 훨씬 간결해지고 reuseable해졌습니다.
 
+만약 react-hooks를 사용하지 않고 state를 사용하면 어떻게 작성이 될까요?
+
+```javascript
+import React from 'react'
+
+function App() {
+  state={
+      value: ''
+  }
+  handleChange = ({ target }) => {
+    this.setState({ value: target.value })
+  }
+  return (
+    <input
+      className="input_box"
+      value={this.state.value}
+	  onChange={this.handleChange}
+    /> 
+  )
+}
+
+export default App
+```
+
+위에 보다 훨씬 양이 많은 걸 확인 할 수 있습니다~, 코드 재사용도 불가능 하구요!
+
+모두 react-hooks를 사랑합니다~ ㅎㅎ
