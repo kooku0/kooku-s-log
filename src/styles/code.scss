@@ -90,8 +90,10 @@ pre[class*='language-'] {
 .token.tag,
 .token.attr-name,
 .token.namespace,
+.token.important,
+.token.keyword,
 .token.deleted {
-  color: #e2777a;
+  color: #c678dd;
 }
 
 .token.function-name {
@@ -101,20 +103,18 @@ pre[class*='language-'] {
 .token.boolean,
 .token.number,
 .token.function {
-  color: #ff9100;
+  color: #e5c07b;
 }
 
 .token.property,
 .token.class-name,
 .token.constant,
 .token.symbol {
-  color: #61afef;
+  color: #4ec9b2;
 }
 
 .token.selector,
-.token.important,
 .token.atrule,
-.token.keyword,
 .token.builtin {
   color: #e06c75;
 }
