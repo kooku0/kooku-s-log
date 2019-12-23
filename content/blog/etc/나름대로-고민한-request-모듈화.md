@@ -77,7 +77,7 @@ function alert(statusCode: number) {
 import HttpRequestBody from './http-request-body'
 import HttpRequestHeader from './http-request-header'
 
-type THttpMethod = 'POST' | 'GET' | 'DELETE' | 'UPDATE'
+type THttpMethod = 'POST' | 'GET' | 'DELETE' | 'PUT'
 interface IOptions {
   headers?: Object
   params?: Object
@@ -104,21 +104,21 @@ class HttpRequest {
       process.env.NODE_ENV === 'development' ? 'http://localhost:4000' : 'http://google.com'
     this.url = requestUrl
     this.method = httpMethod
-    this.query = ''
-    if (options) {
-      this.setOptions(options)
-    } else {
-      this.header = new HttpRequestHeader()
-      this.body = new HttpRequestBody()
-    }
+    this.setOptions(options)
     this.xhttp = new XMLHttpRequest()
     this.errorHandler = errorFunction || null
   }
-  private setOptions(options: Object) {
-    this.header = new HttpRequestHeader(options['headers'])
-    this.body = new HttpRequestBody(options['body'])
-    const params = options['params']
-    return (this.query = params ? this.parseParams(params) : '')
+  private setOptions(options?: Object) {
+    if (options) {
+      this.header = new HttpRequestHeader(options['headers'])
+      this.body = new HttpRequestBody(options['body'])
+      const params = options['params']
+      this.query = params ? this.parseParams(params) : ''
+    } else {
+      this.header = new HttpRequestHeader()
+      this.body = new HttpRequestBody()
+      this.query = ''
+    }
   }
   private parseParams(params: Object) {
     const queryString = Object.keys(params)
@@ -182,7 +182,6 @@ class HttpRequest {
 }
 
 export default HttpRequest
-
 ```
 
 <https://github.com/koomg9599/react-request-module>
