@@ -40,7 +40,7 @@ npm run build
 
 ### 간단한 test server 구축
 
->  [서버구축하기- http base](<https://javafa.gitbooks.io/nodejs_server_basic/content/chapter3.html>)에서 코드 참고
+>  [서버구축하기- http base :: 생활코딩](<https://javafa.gitbooks.io/nodejs_server_basic/content/chapter3.html>)에서 코드 참고
 
 서버는 Node.js이고, 포트번호는 8000번으로 세팅합니다.
 
@@ -252,3 +252,9 @@ app.listen(PORT, () => {
 첫번째 방법의 경우 test와 배포를 손쉽게 할 수 있다는 장점이 있지만 Web Server를 거쳐야한다는 단점이 있다.(장점일수도..)
 
 두번째 방법의 경우 test와 배포가 매우 복잡해진다. 실제 test를 할 경우 무조껀 build를 한 후 test를 해야하므로... (코드를 잘짜면 안그래도 되겠지만 조금 복잡하다.) 하지만 조금더 깔끔한 방법으로 serving 할 수 있다.
+
+
+
+### Reference
+
+[Node.js 코드랩 6. 정적파일 :: 김정환 블로그](http://jeonghwan-kim.github.io/series/2018/12/06/node-web-6_static-files.html)
