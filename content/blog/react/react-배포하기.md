@@ -1,5 +1,5 @@
 ---
-스크립트 명령어를 title: React 배포하기
+title: React 배포하기
 date: 2019-12-26 18:12:83
 category: react
 ---
