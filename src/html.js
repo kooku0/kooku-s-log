@@ -16,7 +16,6 @@ export default class HTML extends React.Component {
             name="google-site-verification"
             content="EFWY1tFw9rE53Le49JwUBZA-f199rj7MRsUQMRBT-jo"
           />
-
           <script
             data-ad-client="ca-pub-5538700590606443"
             async
@@ -25,10 +24,6 @@ export default class HTML extends React.Component {
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
-          <script
-            type="text/javascript"
-            src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5df0a456557d7ce9"
-          />
           <script
             type="text/javascript"
             src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5df0a456557d7ce9"
