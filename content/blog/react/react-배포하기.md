@@ -145,7 +145,6 @@ const getEnvPath = () => {
       return path.join(__dirname, '.env.development')
   }
 }
-dotenv.config({ path: getEnvPath() })
 
 const mimeType = {
   '.ico': 'image/x-icon',
