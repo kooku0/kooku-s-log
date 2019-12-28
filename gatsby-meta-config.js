@@ -2,7 +2,7 @@ module.exports = {
   title: `Kooku's log`,
   description: `개발노트`,
   author: `Kooku`,
-  introduction: `항상 겸손하고 예의 바르게, 칼은 칼집 속에 있을 때가 무서운 법`,
+  introduction: `꾸준하게, 끈기있게`,
   siteUrl: `https://kooku.netlify.com`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
@@ -20,7 +20,7 @@ module.exports = {
     countOfInitialPost: 10, // Config your initial count of post
   },
   sponsor: {
-    buyMeACoffeeId: 'jbee',
+    buyMeACoffeeId: 'kooku',
   },
   share: {
     facebookAppId: '', // Add facebookAppId for using facebook share feature v3.2
