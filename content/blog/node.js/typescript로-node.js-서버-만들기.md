@@ -46,15 +46,15 @@ TypeScript의 경우 바로 실행을 시키지 못하기 때문에 tsc 이나 t
 
 ```typescript
 // src/app.ts
-import * as express from "express";
+import * as express from 'express'
 
 function runServer() {
-  const app = express();
+  const app = express()
   app.listen(5000, () => {
-    console.log("start server");
-  });
+    console.log('start server')
+  })
 }
-runServer();
+runServer()
 ```
 
 이렇게 설정한 후
@@ -100,10 +100,9 @@ npx tsc --init
   "include": ["./src/**/*.ts"],
   "exclude": ["./src/public/*", "../node_modules/**/*"]
 }
-
 ```
 
-여기서 중요한 것은 exclude와 include 그리고 outDir 입니다.  include는 컴파일 할 파일들이고, exclude는 컴파일 제외 목록입니다. 그리고 outDir은 컴파일 후 파일들이 들어갈 곳입니다.
+여기서 중요한 것은 exclude와 include 그리고 outDir 입니다. include는 컴파일 할 파일들이고, exclude는 컴파일 제외 목록입니다. 그리고 outDir은 컴파일 후 파일들이 들어갈 곳입니다.
 
 이렇게 한 후
 
@@ -144,6 +143,9 @@ npx tsc
 
 이렇게 등록을 했다면 다음의 명령어로 서버를 킬 수 있습니다.
 
+> `package.json`의 `scripts`에 등록된 명령어는 `npm run` 명령어를 통해 실행 시킬 수 있습니다.
+> 하지만 많이 사용하는 stript인 `start`와 `test`는 run을 붙히지 않고 `npm start`, `npm test`로 실행 시킬 수 있습니다.
+
 ```shell
 npm run build
 npm run start
@@ -177,16 +179,15 @@ npx nodemon src/app.ts
   "ignore": ["src/public", "test/*"],
   "exec": "set NODE_ENV=dev&& ts-node src/app.ts"
 }
-
 ```
 
-잘 보면알겠지만 `src` 디렉토리에서의 변경내용들을 확인하여 자동으로 restart 시켜줍니다. 그리고 development 환경이기에 환경변수 `NODE_ENV=dev`를 설정하는데. 위에서 scripts 명령어중  `start` 에 `NODE_ENV=production`을 적어준 것과 같은 맥락입니다.
+잘 보면알겠지만 `src` 디렉토리에서의 변경내용들을 확인하여 자동으로 restart 시켜줍니다. 그리고 development 환경이기에 환경변수 `NODE_ENV=dev`를 설정하는데. 위에서 scripts 명령어중 `start` 에 `NODE_ENV=production`을 적어준 것과 같은 맥락입니다.
 
 > 참고로 `NODE_ENV` 환경변수 설정에서 set이라는 명령어를 사용했지만 이것은 window에서의 명령어고, maxOS or Linux에서는 다른 명령어를 사용한다.
 >
 > NODE_ENV의 경우 개발환경인지 배포환경이지에 따라 다른 작업을 수행할 필요가 있을 때를 위하여 작성하였습니다.
 
-`nodemon.json` 설정이 다 되었으므로  `package.json`에 `start:dev` 명령어를 추가하겠습니다.
+`nodemon.json` 설정이 다 되었으므로 `package.json`에 `start:dev` 명령어를 추가하겠습니다.
 
 ```json
 {
@@ -195,7 +196,7 @@ npx nodemon src/app.ts
   "description": "ts-node test",
   "main": "app.ts",
   "scripts": {
-  	"start:dev": "nodemon --config ./nodemon.json",
+    "start:dev": "nodemon --config ./nodemon.json",
     "build": "tsc",
     "start": "set NODE_ENV=production&& node build/app.js"
   },
@@ -222,7 +223,7 @@ npx nodemon src/app.ts
 npm run start:dev
 ```
 
-배포할 때는 
+배포할 때는
 
 ```shell
 npm run build
