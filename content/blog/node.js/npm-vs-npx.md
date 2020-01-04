@@ -24,6 +24,28 @@ npm install MODULE_NAME
 
 여기서 말하는 npm registry는 npm에서 운영하는 npm 모듈들을 관리하는 곳 입니다. 만약 `npm install MODULE_NAME`으로 모듈을 설치했다면 해당 모듈은 npm registry에 있는 것을 다운받는 것 입니다.
 
+### 1) 한 번만 사용할 명령어를 사용할 때 (Executing one-ff commands)
+
+React 프로젝트를 시작할때 `create-react-app` 패키지를 설치해서 사용하실 겁니다. 하지만 프로젝트 처음 만들때만 사용할 패키지를 왜 설치해서 사용해야 할까요?
+
+1. 자주 사용하지 않는 무거운 패키지가 로컬 스토리지에 있음.
+2. 로컬 스토리지에 있는 패키지의 새로운 버전이 나왔을 시 이미 존재한 패키지를 제거하고 다시 설치해야 함.
+
+위의 두 문제를 해결하기 위해 나온 것이 **npx**입니다. **npx**는 모듈을 로컬 혹은 전역에 설치하지 않고 패키지를 실행시킬 수 있습니다.
+
+로컬, 전역에 `create-react-app`가 설치되어 있지 않지만 다음과 같이 **npx**로 패키지를 실행할 수 있습니다.
+<img src='./images/npx01.jpg'/>
+물론 **npx**를 실행한 후에도 다음과 같이 패키지는 설치되어 있지 않습니다.
+<img src='./images/npx02.jpg'/>
+
+### 2) 여러 Node.js 버전을 실행할 수 있다. (Run commands with different Node.js versions)
+
+<img src='./images/npx03.png'/>
+
+nvm, nave 또는 n 같은 버전 관리자를 사용하지 않고도, 다른 node.js 버전을 사용하여 node 명령을 할 수 있습니다.
+
 ### Reference
 
 - [the npm blog](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
+
+- [[npm]npx란 무엇인가? :: 빠리의 택시 운전사](https://geonlee.tistory.com/32)
