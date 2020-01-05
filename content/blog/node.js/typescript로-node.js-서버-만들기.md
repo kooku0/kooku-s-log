@@ -197,7 +197,7 @@ npx nodemon src/app.ts
   "main": "app.ts",
   "scripts": {
     "start:dev": "nodemon --config ./nodemon.json",
-    "build": "tsc",
+    "build": "rd /s ./build && tsc",
     "start": "set NODE_ENV=production&& node build/app.js"
   },
   "author": "kooku",
@@ -212,6 +212,8 @@ npx nodemon src/app.ts
   }
 }
 ```
+
+> **build** 할 때 이전에 빌드된 `build` 폴더를 삭제하고 다시 빌드하게 하였습니다. `rd /s` 명령어는 _window_ 명령어이고, linux 또는 macOS에서는 `rm -rf`를 사용하면 됩니다.
 
 ### 마무리
 
