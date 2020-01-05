@@ -4,7 +4,7 @@ date: 2020-01-05 15:01:40
 category: node.js
 ---
 
-**TypeScript로 node.js 서버 만들기**라는 포스팅을 먼저 해버려 순서가 조금 바뀌기는 했지만 ㅎㅎ babel을 사용해서 es6 환경 구축을 하는 법 도 설명하려고 합니다.
+**TypeScript로 node.js 서버 만들기**라는 포스팅을 먼저 해버려 순서가 조금 바뀌기는 했지만 ㅎㅎ **babel을 사용해서 es6 환경 구축을 하는 법**도 설명하려고 합니다.
 babel에 대한 설명은 [(번역)Babel에 대한 모든 것 :: Jbee's blog](https://jaeyeophan.github.io/2017/05/16/Everything-about-babel/)을 참고하시면 될 것 같습니다.
 
 ## 1. 환경설정
