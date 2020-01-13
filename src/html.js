@@ -12,6 +12,11 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=2"
           />
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N3L446J');</script>
           <meta
             name="google-site-verification"
             content="EFWY1tFw9rE53Le49JwUBZA-f199rj7MRsUQMRBT-jo"
@@ -24,6 +29,8 @@ export default class HTML extends React.Component {
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3L446J"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <script
             type="text/javascript"
             src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5df0a456557d7ce9"

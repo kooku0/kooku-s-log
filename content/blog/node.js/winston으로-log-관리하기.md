@@ -6,9 +6,9 @@ category: node.js
 
 ## winston이란
 
-winston은 다중 전송을 지원하는 simple하고 universal한 logging 라이브러리로 설계되었습니다. 각 winston logger에는 여러 가지 레벨로 구성된 여러 개의 전송이 있을 수 있습니다. 예를 들어 오류 로그를 데이터비이스와 콘솔 또는 로컬 파일에 동시에 저장 또는 출력할 수 있습니다.
+winston은 simple하고 universal한 logging 라이브러리로 다중전송을 지원합니다. 각 winston logger에는 여러 레벨로 구성된 다중 전송이 있을 수 있습니다. 예를 들어 오류 로그를 데이터비이스와 콘솔 또는 로컬 파일에 동시에 저장, 출력할 수 있습니다.
 
-winston은 logging process 일부를 분리하여 더 유연하고 확장 가능하도록 하는 것을 목표로 합니다. 로그 포멧 & 레벨을 유연하게 지원하고, API가 transport logging(즉, 로그 저장/색인화 방법, 사용자 지정 전송 추가)를 분리하는 것을 보장하였습니다.
+winston은 logging process 일부를 분리하여 더 유연하고 확장 가능하도록 하는 것을 목표로 합니다. 로그 포멧 & 레벨을 유연하게 지원하고, API가 transport logging(즉, 로그 저장/색인화 방법, 사용자 지정 전송 추가)을 분리하였습니다.
 
 ## Usage
 
@@ -107,7 +107,7 @@ logger
   .remove(console) // Remove console transport
 ```
 
-`winston.Logger`는 `configure` methos를 사용해서 이전에 설정한 configure를 reconfigure 할 수 있습니다.
+`winston.Logger`는 `configure` methods를 사용해서 이전에 설정한 configure를 reconfigure 할 수 있습니다.
 
 ```javascript
 const logger = winston.createLogger({
