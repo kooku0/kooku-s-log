@@ -4,7 +4,7 @@ date: 2020-01-05 16:01:39
 category: node.js
 ---
 
-> 이 문서는 [winston Git Repo](https://github.com/winstonjs/winston)의 README를 번역한 문서입니다.
+> 이 문서는 [winston Git Repo](https://github.com/winstonjs/winston)의 README를 번역한 문서입니다. 맨 마지막에 실제 제가 작성한 sample 코드가 있으니 그대로 사용하는 것도 추천합니다.
 
 ## winston이란
 
@@ -159,12 +159,13 @@ const { level, message, ...meta } = info
 ```
 
 `logform`에 있는 몇몇의 속성들은 자체적으로 추가적인 속성들을 가집니다.
-|Property|Format added by|Description|
-|:---:|:---:|:---:|
-|`splat`|`splat()`|`%d %s`스타일 메시지에 대한 문자열 간격|
-|`timestamp`|`timestamp()`|메시지를 수신한 timestamp|
-|`label`|`label()`|각 메시지에 대한 커스텀 라벨|
-|`ms`|`ms()`|이전 로그 메시지 이후 경과된 시간(ms)|
+
+|  Property   | Format added by |               Description               |
+| :---------: | :-------------: | :-------------------------------------: |
+|   `splat`   |    `splat()`    | `%d %s`스타일 메시지에 대한 문자열 간격 |
+| `timestamp` |  `timestamp()`  |        메시지를 수신한 timestamp        |
+|   `label`   |    `label()`    |      각 메시지에 대한 커스텀 라벨       |
+|    `ms`     |     `ms()`      |  이전 로그 메시지 이후 경과된 시간(ms)  |
 
 사용자로써 원하는 속성을 자유롭게 추가할 수 있습니다. - _내부 상태는 `symbol` 속성에 의해 유지됩니다._
 
@@ -438,7 +439,63 @@ winston.format.combine(winston.format.colorize(), winston.format.json())
 
 여기까지 하겠습니다. ㅋㅋ 너무 힘드네요. 하지만 이정도만 알아도 충분할 것으로 예상됩니다. 더욱 알고싶으신 분들은 밑의 winston github repo를 참고하시면 됩니다.
 
+추가로 제가 작성한 코드입니다.
+
+```javascript
+// src/logger.ts
+import { createLogger, format, transports } from 'winston'
+
+const { combine, timestamp, prettyPrint } = format
+
+const logger = createLogger({
+  level: 'info',
+  format: combine(format.json(), timestamp(), prettyPrint()),
+  transports: [new transports.File({ filename: 'combined.log' })],
+})
+
+if (process.env.NODE_ENV !== 'production') {
+  logger.add(
+    new transports.Console({
+      format: format.simple(),
+    })
+  )
+}
+export default logger
+```
+
+```javascript
+// src/app.ts
+import * as express from 'express'
+import * as http from 'http'
+import logger from './logger'
+
+// Shutdown codes
+const errShutdown = async (server: http.Server, err?: Error) => {
+  logger.error(`Stopping server with error: ${err}`)
+  await server.close()
+  process.exit(1)
+}
+
+async function runServer() {
+  const app = express()
+  const server = app.listen(5000, () => {
+    logger.info('Server app listening on port 5000!')
+  })
+  try {
+  } catch (e) {
+    errShutdown(server, e)
+    throw e
+  }
+}
+runServer()
+  .then(() => {
+    logger.info('run succesfully')
+  })
+  .catch((ex: Error) => {
+    logger.error('Unable run:', ex)
+  })
+```
+
 ### Reference
 
-- [NodeJS 인기있는 Logging 모듈 Winston :: 농구하는 개발자](https://basketdeveloper.tistory.com/42)
 - [winston github repo](https://github.com/winstonjs/winston)
