@@ -126,6 +126,7 @@ Event에는 3단계의 life cycle이 존재합니다. (cycle, target, bubbling)
 </html>
 ```
 
+<img src="./images/event-flow.jpg"/>
 ## 4. 마무리
 
 대부분의 사람들이 **Event Bubbling**은 들어봤지만 **Event Capturing**은 처음 들어봤을 겁니다. 이 포스팅으로 **Event Flow**에 대하여 많이 아셨으면 좋겠습니다.
