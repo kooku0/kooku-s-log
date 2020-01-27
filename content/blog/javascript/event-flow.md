@@ -4,7 +4,7 @@ date: 2020-01-25 18:01:40
 category: javascript
 ---
 
-자바스크립트에서 중요한 **Event Flow**에 대하여 알아보자! 대부분 *Event Bubble*은 알고 있을 것 입니다. React에서는 이를 막기 위해 `event.stopPropatation()`을 사용한 경험이 많을 것 입니다. 하지만 **Event Flow**에는 *Event Bubble*말고도 다른 것들이 있다는 사실을 아시나요? 이번에는 **Event Flow**에 대하여 완벽하게 다루어 보겠습니다.
+자바스크립트에서 중요한 **Event Flow**에 대하여 알아보자! 대부분 *Event Bubble*은 알고 있을 것 입니다. React에서는 이를 막기 위해 `event.stopPropagation()`을 사용한 경험이 많을 것 입니다. 하지만 **Event Flow**에는 *Event Bubble*말고도 다른 것들이 있다는 사실을 아시나요? 이번에는 **Event Flow**에 대하여 완벽하게 다루어 보겠습니다.
 
 ## 들어가기 전에
 
