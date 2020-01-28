@@ -12,7 +12,7 @@ stack 2개로 queue를 구현하는 것은 면접 단골 질문이다.
 class Queue{
     private stack<int> inBox;
     private stack<int> outBox;
-    
+
     public void enQueue(int a){
         inBox.push(a);
 	}

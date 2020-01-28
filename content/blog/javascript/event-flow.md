@@ -13,9 +13,9 @@ Event에는 3단계의 life cycle이 존재합니다. (cycle, target, bubbling)
 
 ## Index
 
-1. **[Event Bubble](#1-Event-Bubble)**
-2. **[Event Capturing](#2-Event-Capturing)**
-3. **[DOM Event Flow](#3-DOM-Event-Flow)**
+1. **[Event Bubble](#1-event-bubble)**
+2. **[Event Capturing](#2-event-capturing)**
+3. **[DOM Event Flow](#3-dom-event-flow)**
 4. **[마무리](#4-마무리)**
 
 ## 1. Event Bubble
