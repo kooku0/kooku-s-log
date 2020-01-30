@@ -8,6 +8,13 @@ lang: 'en'
 
 <div align="center">
 
-_Front-end 개발자가 되고 싶은 사람, 인정받는 개발자가 되고싶은 사람_
+Front-end 개발자가 되고 싶은 사람, 이쁜 코드를 작성하고 싶은 사람
 
 </div>
+
+|             |                              |
+| :---------: | :--------------------------: |
+|  **Email**  |       kooku@kakao.com        |
+| **GitHub**  | https://github.com/koomg9599 |
+|  **Blog**   |  https://kooku.netlify.com   |
+| **LINE ID** |          koomg9599           |
