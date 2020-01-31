@@ -8,7 +8,13 @@ lang: 'en'
 
 <div align="center">
 
-성장에 목이 마른, 이쁜 코드를 보면 기뻐하는 사람
+_성장에 목이 마른 사람, 이쁜 코드를 보면 기뻐하는 사람_
+
+</div>
+
+<div align="center">
+
+<img src="./images/github_profile.jpg" width="600px"/>
 
 </div>
 
@@ -31,42 +37,94 @@ lang: 'en'
 
 ## LINE Financial Plus (Intern)
 
-|              |                         |
-| :----------: | ----------------------- |
-|  **period**  | 19.07 ~ 19.08 (2 m) |
-| **position** | F Web Dev 2 / Front-End |
-| **Projects** | 웹 성능 측정 서비스             |
+|              |                              |
+| :----------: | ---------------------------- |
+|  **period**  | 19.07 ~ 19.08 (2 m)          |
+| **position** | F Web Dev 2 / Front-End      |
+| **Projects** | 웹 성능 측정 서비스  (Deungdae Jigi) |
 
 ### 웹 성능 측정 서비스 (Front-End, Back-End 개발)
 
-Lighthouse 모듈을 이용하여 웹 성능을 측정하고 기록할 수 있으며, CI 서버의 기능까지 사용할 수 있는 어플리케이션
+Lighthouse 모듈을 이용하여 웹 성능을 측정하고 기록할 수 있으며, CI 서버로도 사용할 수 있는 웹 서비스.
 
-* 19.07 ~ 19.08 (2 m)
-* TypeScript, React, Redux, Express.js
+* 19.07 ~ 19.08 (2m)
+* TypeScript, React(hooks), Redux, Express.js
+
+#### Description
+
+* 프로젝트 초기 React + TypeScript Application Architecture 설계
+* Node.js + TypeScript Architecture 설계
+* History, My Page, Report
+* ChatJS를 이용한 점수 시각화
+* OAuth 2
+* CI서버 구축(+GitHub Bot)
+  * Pull Request시 해당 Branch를 Clone -> Buile -> Audit
+  * 설정한 Threshold 값 못 넘을 시 Fail(Merge 불가)
+
+### Images
+
+<div align="center">
+  <img src="./images/measure.png" height="200px"/>
+  <img src="./images/report.png" height="200px"/>
+</div>
+<div align="center">
+_url 입력 시 성능과 취약한 부분 표시_
+</div>
+</br>
+<div align="center">
+  <img src="./images/history.png" width="500px"/>
+</div>
+<div align="center">
+_성능측정결과를 저장하여 그래프로 시각화_
+</div>
+</br>
+<div align="center">
+  <img src="./images/github1.png" height="300px"/>
+  <img src="./images/github2.png" height="300px"/>
+</div>
+<div align="center">
+_GitHub Repo RP 시 자동 빌드, 배포 후 성능측정 결과 표시_
+</div>
+
+## 이노매틱 (Intern)
+
+|              |                       |
+| :----------: | --------------------- |
+|  **period**  | 18.12 ~ 19.06 (6m)    |
+| **position** | 개발 / Front-End        |
+| **Projects** | Ad-Tech (Mr. Doochie) |
+
+### 미스터 두치 (Front-End 개발 담당, PM)
+
+Ad-Tech 서비스로 가게를 등록하면 거리, 리뷰수, 메뉴, 별점, 가격 등 여러가지 항목을 통해 경쟁사를 추천. 네이버, 페이스북, 인스타그램에서 관련 검색어 상위노출 여부, 포스팅 수, 리뷰 수 등의 정보를 가져와 시각화한 후 Reporting.
+
+* 18.12 ~ 19.06 (6m)
+* React, Redux
 
 #### Description
 
 * 프로젝트 초기 React Application Architecture 설계
-* 설명 2
-* 설명 3
-* 설명 4
+* 경쟁사 추천 알고리즘 제작
+* CharJS를 이용한 Reporting 시각화
 
-## 이노매틱
+#### Images
 
-|              |                         |
-| :----------: | ----------------------- |
-|  **period**  | 18.12 ~ 19.06 (6 m) |
-| **position** | 개발 / Front-End |
-| **Projects** | 미스터 두치             |
-
-### 미스터 두치 (Front-End 개발 담당)
-
-Ad-Tech 서비스로 
-
-
-### Project Generator
-
-* 프로젝트의 기반이 되는 TypeScript 기반의 template을 제작 및 유지보수.
+<div align="center">
+  <img src="./images/map.png" height="200px"/>
+  <img src="./images/rival.png" height="200px"/>
+  <img src="./images/list.png" height="200px"/>
+</div>
+<div align="center">
+_가게 등록 및 경쟁사 추천_
+</div>
+</br>
+<div align="center">
+  <img src="./images/report01.png" height="400px"/>
+  <img src="./images/report02.png" height="400px"/>
+</div>
+<div align="center">
+_가게, 경쟁사 데이터 수집 Report_
+</div>
 
 # Open Source Projects
 
@@ -75,12 +133,61 @@ Ad-Tech 서비스로
 * GitHub Repository link: https://github.com/JaeYeopHan/gatsby-starter-bee
 * React, Scss, Gatsby
 
-기존의 템플릿을 커스터마징하여 사용
+기존의 템플릿을 커스터마징하여 블로그 활동, Usecase
 
-## ES6, TypeScript template
+<img src="./images/contributor.jpg" width="500px"/>
 
-* GitHub Repository link: 
+# ETC
 
+## 나만의 커밋 메시지 가이드
+
+* GitHub Repository link: https://github.com/koomg9599/commit-message-guide
+  
+커밋 메시지를 작성하는 가이드 작성
+
+ps. +[협업할 때 사용하는 Commitlint-bot](https://kooku.netlify.com/etc/%ED%98%91%EC%97%85%ED%95%A0%20%EB%95%8C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-commitlint-bot/)
+
+## Node.js(TypeScript) Template Code
+
+* GitHub Repository link: https://github.com/koomg9599/TypeScript-Node.js-Template
+* Winston, ExpressJS, TypeScript
+
+TypeScript로 Node.js 서버를 구축하는 템플릿 코드
+
+## Auto-Complete module
+
+* GitHub Repository link: https://github.com/koomg9599/auto-complete
+* React(hooks)
+
+React Hook을 이용하여 Auto-Complete module 제작
+
+## Alert module
+
+* GitHub Repository link: https://github.com/koomg9599/react-alert-library
+* React(hooks), Redux, CSS
+
+React Hook을 이용하여 Alert module 제작
+
+## Request module
+
+* GitHub Repository link: https://github.com/koomg9599/react-alert-library
+* TypeScript, React
+
+TypeScript를 이용하여 request 모듈을 제작. axios등 라이브러리들은 사용하지 않고 XMLHttpRequest만 사용
+
+## HLS Audio Downstream server
+
+* GitHub Repository link: https://github.com/koomg9599/HlsAudioDownstream
+* ExpressJS
+
+HLS 프로토콜을 이용한 Audio Downstream Node 서버 제작
+
+## Circle Chart module
+
+* GitHub Repository link: https://github.com/koomg9599/circle-chart-react-hooks
+* React(hooks)
+
+Circle Chart module 제작
 
 # Education
 
