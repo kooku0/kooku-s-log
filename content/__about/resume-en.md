@@ -64,26 +64,30 @@ Lighthouse 모듈을 이용하여 웹 성능을 측정하고 기록할 수 있�
 ### Images
 
 <div align="center">
-  <img src="./images/measure.png" height="150px"/>
-  <img src="./images/report.png" height="150px"/>
+  <img src="./images/measure.png"/>
 </div>
 <div align="center">
-_url 입력 시 성능과 취약한 부분 표시_
+
+  _url 입력 시 성능과 취약한 부분 표시_
+
 </div>
 </br>
 <div align="center">
   <img src="./images/history.png" width="500px"/>
 </div>
 <div align="center">
+
 _성능측정결과를 저장하여 그래프로 시각화_
+
 </div>
 </br>
 <div align="center">
-  <img src="./images/github1.png" height="200px"/>
-  <img src="./images/github2.png" height="200px"/>
+  <img src="./images/github.png"/>
 </div>
 <div align="center">
+
 _GitHub Repo RP 시 자동 빌드, 배포 후 성능측정 결과 표시_
+
 </div>
 
 ## 이노매틱 (Intern)
@@ -110,20 +114,21 @@ Ad-Tech 서비스로 가게를 등록하면 거리, 리뷰수, 메뉴, 별점, �
 #### Images
 
 <div align="center">
-  <img src="./images/map.png" height="130px"/>
-  <img src="./images/rival.png" height="130px"/>
-  <img src="./images/list.png" height="130px"/>
+  <img src="./images/store_info.png"/>
 </div>
 <div align="center">
+
 _가게 등록 및 경쟁사 추천_
+
 </div>
 </br>
 <div align="center">
-  <img src="./images/report01.png" height="300px"/>
-  <img src="./images/report02.png" height="300px"/>
+  <img src="./images/report.png" />
 </div>
 <div align="center">
+
 _가게, 경쟁사 데이터 수집 Report_
+
 </div>
 
 # Open Source Projects
