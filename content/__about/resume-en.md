@@ -55,7 +55,7 @@ Lighthouse 모듈을 이용하여 웹 성능을 측정하고 기록할 수 있�
 * 프로젝트 초기 React + TypeScript Application Architecture 설계
 * Node.js + TypeScript Architecture 설계
 * History, My Page, Report
-* ChatJS를 이용한 점수 시각화
+* ChartJS를 이용한 점수 시각화
 * OAuth 2
 * CI서버 구축(+GitHub Bot)
   * Pull Request시 해당 Branch를 Clone -> Build -> Deploy -> Audit
@@ -66,24 +66,29 @@ Lighthouse 모듈을 이용하여 웹 성능을 측정하고 기록할 수 있�
 <div align="center">
   <img src="./images/measure.png"/>
 </div>
+
 <div align="center">
 
   _url 입력 시 성능과 취약한 부분 표시_
 
 </div>
+
 </br>
 <div align="center">
   <img src="./images/history.png" width="500px"/>
 </div>
+
 <div align="center">
 
 _성능측정결과를 저장하여 그래프로 시각화_
 
 </div>
+
 </br>
 <div align="center">
   <img src="./images/github.png"/>
 </div>
+
 <div align="center">
 
 _GitHub Repo RP 시 자동 빌드, 배포 후 성능측정 결과 표시_
@@ -109,22 +114,25 @@ Ad-Tech 서비스로 가게를 등록하면 거리, 리뷰수, 메뉴, 별점, �
 
 * 프로젝트 초기 React Application Architecture 설계
 * 경쟁사 추천 알고리즘 제작
-* CharJS를 이용한 Reporting 시각화
+* ChartJS를 이용한 Reporting 시각화
 
 #### Images
 
 <div align="center">
   <img src="./images/store_info.png"/>
 </div>
+
 <div align="center">
 
 _가게 등록 및 경쟁사 추천_
 
 </div>
+
 </br>
 <div align="center">
   <img src="./images/report.png" />
 </div>
+
 <div align="center">
 
 _가게, 경쟁사 데이터 수집 Report_
