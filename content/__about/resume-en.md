@@ -18,7 +18,7 @@ _성장에 목이 마른 사람, 이쁜 코드를 보면 기뻐하는 사람_
 
 </div>
 
-**저는 `____` 개발자입니다.**
+**저는 `____` 하는 개발자입니다.**
 
 1. 좋은 코드와 설계를 고민하는
 2. 성장하기 위해 노력하는
@@ -165,7 +165,7 @@ ps. +[협업할 때 사용하는 Commitlint-bot](https://kooku.netlify.com/etc/%
 * GitHub Repository link: https://github.com/koomg9599/TypeScript-Node.js-Template
 * Winston, ExpressJS, TypeScript
 
-TypeScript로 Node.js 서버를 구축하는 템플릿 코드
+TypeScript로 Node.js Server를 구축하는 템플릿 코드
 
 ## Auto-Complete module
 
