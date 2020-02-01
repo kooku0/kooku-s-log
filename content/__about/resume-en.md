@@ -18,6 +18,8 @@ _성장에 목이 마른 사람, 이쁜 코드를 보면 기뻐하는 사람_
 
 </div>
 
+</br>
+
 **저는 `____` 하는 개발자입니다.**
 
 1. 좋은 코드와 설계를 고민하는
@@ -35,11 +37,17 @@ _성장에 목이 마른 사람, 이쁜 코드를 보면 기뻐하는 사람_
 
 # Experiences
 
+## Doosan Digital Innovation
+
+|            |                     |
+| :--------: | :-----------------: |
+| **period** | 19.12 ~ **current** |
+
 ## LINE Financial Plus (Intern)
 
 |              |                              |
 | :----------: | ---------------------------- |
-|  **period**  | 19.07 ~ 19.08 (2 m)          |
+|  **period**  | 19.07 ~ 19.08 (2m)           |
 | **position** | F Web Dev 2 / Front-End      |
 | **Projects** | 웹 성능 측정 서비스  (Deungdae Jigi) |
 
@@ -57,8 +65,8 @@ Lighthouse 모듈을 이용하여 웹 성능을 측정하고 기록할 수 있�
 * History, My Page, Report
 * ChartJS를 이용한 점수 시각화
 * OAuth 2
-* CI서버 구축(+GitHub Bot)
-  * Pull Request시 해당 Branch를 Clone -> Build -> Deploy -> Audit
+* 자체 CI서버 구축(+GitHub Bot)
+  * GitHub Webhook을 이용하여 Pull Request시 해당 Branch를 Clone -> Build -> Deploy -> Audit
   * 설정한 Threshold 값 못 넘을 시 Fail(Merge 불가)
 
 ### Images
@@ -115,6 +123,8 @@ Ad-Tech 서비스로 가게를 등록하면 거리, 리뷰수, 메뉴, 별점, �
 * 프로젝트 초기 React Application Architecture 설계
 * 경쟁사 추천 알고리즘 제작
 * ChartJS를 이용한 Reporting 시각화
+* Project Manager
+* 기획
 
 #### Images
 
