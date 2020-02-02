@@ -18,6 +18,7 @@ react를 1년 가까이 했지만 **Generator** 와 **Iterator**를 사용한 �
    - **[내장 iterable](#내장-iterable)**
 2. **[Generator function](#2-generator-function)**
 3. **[yield\* 표현식](#3-yield-표현식)**
+4. **[마치며](#4-마치며)**
 
 ## 1. 반복자(Interator)
 
@@ -142,3 +143,13 @@ console.log(iterator.next()); // { value: 5, done: false }
 console.log(iterator.next()); // { value: 6, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
 ```
+
+## 4. 마치며
+
+이번에 공부한 내용을 바탕으로 **Generator**와 **Iterator**에 대한 개념을 완벽히 이해하셨으면 좋겠습니다. 저는 이만 *react-saga*를 공부하러 가보도록 하겠습니다. ㅎ
+
+### reference
+
+* [반복기 및 생성기 :: MDN web docs](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+* [function* :: MDN web docs](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/function*)
+* [yield* :: MDN web docs](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/yield*)
