@@ -39,9 +39,10 @@ _성장에 목이 마른 사람, 이쁜 코드를 보면 기뻐하는 사람_
 
 ## Doosan Digital Innovation
 
-|            |                     |
-| :--------: | :-----------------: |
-| **period** | 19.12 ~ **current** |
+|              |                                      |
+| :----------: | :----------------------------------: |
+|  **period**  |         19.12 ~ **current**          |
+| **position** | Digital Development Platform Chapter |
 
 ## LINE Financial Plus (Intern)
 
