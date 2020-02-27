@@ -17,10 +17,14 @@ auto-complete 모듈을 만들면서 정말 고민이 많았다.
 이걸 구현하기 위하여 먼저 window의 클릭 이벤트를 달고, 만약 클릭한게 list-item이 아니면 item-list window가 close되게 하였다.
 
 ```javascript
- const windowCloseHandler = e => {
-    if (e.target.className !== 'input_item') {
-      windowInvisible()
+const handleClickOthers = { target } => {
+    const { className } = target
+    if (className !== 'input_item' || className !== 'input_box') {
+        closeWindow()
     }
-  }
+}
+useEffect(() => {
+    window.addEventListener('click', handleClickOthers)
+}, [])
 ```
 
