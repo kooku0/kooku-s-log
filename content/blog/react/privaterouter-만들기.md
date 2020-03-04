@@ -72,7 +72,7 @@ export default ({ component: Component, redirectTo, authStore, path, exact }) =>
         	Path={path}
 		    exact={exact}
     		render={(props) =>
-            	authStore!.isLogin() ? (
+            	isLogin() ? (
                 	<Component {..props} />
     			) : (
                     <Redirect
