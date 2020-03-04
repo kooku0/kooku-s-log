@@ -1,5 +1,5 @@
 ---
-title: [Netflix] 나 홀로 그대
+title: (Netflix) 나 홀로 그대
 date: 2020-03-04 13:03:39
 category: 일상
 ---
