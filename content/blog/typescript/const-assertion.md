@@ -122,22 +122,27 @@ TypeScript에는 discriminated union이라는 기능이 있습니다. 이 기능
 
 아래 예제를 생각해봅시다.
 
-```
+```ts
 const circle = {
   type: 'circle',
-  radius: 10
-};const square = {
+  radius: 10,
+}
+const square = {
   type: 'square',
   width: 10,
-  height: 20
-};type Shape = typeof circle | typeof square;function draw(shape: Shape) {
+  height: 20,
+}
+
+type Shape = typeof circle | typeof square
+
+function draw(shape: Shape) {
   switch (shape.type) {
     case 'circle':
-      console.log(shape.radius);
-      break;
+      console.log(shape.radius)
+      break
     case 'square':
-      console.log(shape.width);
-      break;
+      console.log(shape.width)
+      break
   }
 }
 ```
@@ -148,7 +153,7 @@ JavaScript에서라면 크게 문제가 되지 않을 코드입니다. 하지만
 
 <div align="center"><small>객체 내부의 문자열 리터럴에 대한 타입 추론이 이루어지지 않음</small></div>
 
-이런 에러가 나는 이유는, shape.type의 값이 ‘circle’ 인지 확인되었음에도 불구하고 shape 변수의 타입이 [typeof circle]로 좁혀지지 않았기 때문입니다. 
+이런 에러가 나는 이유는, shape.type의 값이 ‘circle’ 인지 확인되었음에도 불구하고 shape 변수의 타입이 [typeof circle]로 좁혀지지 않았기 때문입니다.
 
 이 때,
 
