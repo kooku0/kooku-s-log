@@ -39,10 +39,16 @@ _성장에 목이 마른 사람, 이쁜 코드를 보면 기뻐하는 사람_
 
 ## Doosan Digital Innovation
 
-|              |                                      |
-| :----------: | :----------------------------------: |
-|  **period**  |         19.12 ~ **current**          |
-| **position** | Digital Development Platform Chapter |
+|              |                                               |
+| :----------: | :-------------------------------------------: |
+|  **period**  |              19.12 ~ **current**              |
+| **position** | Digital Dev Platform Chapter / Cloud Engineer |
+
+### Chapter 소개
+
+* Cloud Service Vendors(AWS, Azure, GCP, etc..), Agile Tool Chain(Atlassian, Trello)등의 업체와 회사간의 계약
+* 계열사 프로젝트의 아키텍쳐 큐레이팅, 컨설팅
+* 프로젝트에 사용된 Cloud 등의  서비스 billing
 
 ## LINE Financial Plus (Intern)
 
@@ -167,6 +173,7 @@ _가게, 경쟁사 데이터 수집 Report_
 
 * GitHub Repository link: https://github.com/koomg9599/commit-message-guide
   
+
 커밋 메시지를 작성하는 가이드 작성
 
 ps. +[협업할 때 사용하는 Commitlint-bot](https://kooku.netlify.com/etc/%ED%98%91%EC%97%85%ED%95%A0%20%EB%95%8C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-commitlint-bot/)
