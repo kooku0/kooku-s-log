@@ -149,6 +149,8 @@ getData(function(tableData) {
 });
 ```
 
+
+
 ## 3. Promise
 
 프로미스는 Callback Hell을 막기 위해 나온 것 입니다. 아주 유용하죠.
@@ -236,9 +238,25 @@ async function hello() {
 }
 ```
 
-코드에서 보시면 알겠지만 `Promise`와 `async await`는 독립된 개념이 아닙니다. `await`는 `promise`를 기다리는 역할입니다. 만약 `await`에  함수의 return `Promise`를 물려놓치 않았다면 `await`를 잘 못 사용하고 있는 것 입니다.
+코드에서 보시면 알겠지만 `Promise`와 `async await`는 독립된 개념이 아닙니다. `await`는 `promise`를 기다리는 역할입니다. 만약 `await`에  함수의 return `Promise`를 물려놓치 않았다면 `await`를 잘못 사용하고 있는 것 입니다.
 
+#### await 와 Promise
 
+`await` 문은 `async`함수의 실행을 중단시키고, `Promise`가 fulfill되거나 reject되기를 기다리고, 다시 `async`함수를 실행시킵니다. 이때 `await` 문의 값은 `Promise` 에서 fulfill된 값이 됩니다.
+
+만약 `Promise`가 `reject`되면, `await`은 `reject`된 값을 `throw`합니다.
+
+`await` 연산자 다음에 나오는 문의 값이 `Promise`가 아니면 해당 값을 [resolved Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve)로 변환시킵니다.
+
+ex)
+
+```js
+async function f2() {
+  var y = await 20;
+  console.log(y); // 20
+}
+f2();
+```
 
 ### 예외 처리
 
@@ -261,6 +279,8 @@ async function getData() {
     }
 }
 ```
+
+
 
 ## 5. Promise 응용
 
