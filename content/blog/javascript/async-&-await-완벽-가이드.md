@@ -28,6 +28,8 @@ aync & await를 제대로 이해하고 사용하기 어려운 이유는 밑의 4
 
 <img src='./images/browser-structure.png' />
 
+<small>출처: [자바스크립트 비동기 처리 과정과 RxJS Scheduler :: 아내와 아들 그리고 딸밖에 모르는 남편](http://sculove.github.io/blog/)</small>
+
 자바스크립트가 동시에 단 하나의 작업만을 한다는데 어떻게 여러가지 작업을 비동기로 작업 할 수 있을까?
 
 그 비밀은 바로 `Event Loop`와 `Queue`에 있다.
@@ -94,27 +96,211 @@ function getData() {
 console.log(getData()) // undefined
 ```
 
-
+`$.get()`로 ajax 통신을 한 후 response를 data 변수에 넣어줍니다. 하지만, retrun 이 response값을 기다리지 않고 반환함으로 undefined가 출력됩니다.
 
 ### setTimeout
 
+```js
+// #1
+console.log('Hello');
+// #2
+setTimeout(function() {
+	console.log('Bye');
+}, 3000);
+// #3
+console.log('Hello Again');
+```
 
+원하는 결과
+
+```
+'Hello'
+'Bye'
+'Hello Again'
+```
+
+실제 출력값
+
+```
+'Hello'
+'Hello Again'
+'Bye'
+```
+
+### 콜백 함수로 해결하기
+
+이제는 콜백함수로 문제를 해결해 보겠습니다.
+
+```js
+function getData(callbackFunc) {
+	$.get('http://localhost:3000', function(response) {
+		callbackFunc(response); // 서버에서 받은 데이터 response를 callbackFunc() 함수에 넘겨줌
+	});
+}
+
+getData(function(tableData) {
+	console.log(tableData); // $.get()의 response 값이 tableData에 전달됨
+});
+```
 
 ## 3. Promise
+
+프로미스는 Callback Hell을 막기 위해 나온 것 입니다. 아주 유용하죠.
+
+위의 문제들을 Promise로 해결해 보겠습니다.
+
+```js
+function getData() {
+	return new Promise((resolve, reject) => 
+    	$.get('http://localhost:3000', (response) => resolve(response))
+    )
+}
+
+getData().then((data) => console.log(data))
+```
+
+```js
+function sayBye() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Bye')
+            resolve()
+		}, 3000)
+    })
+}
+
+// #1
+console.log('Hello');
+// #2
+sayBye()
+    .then(() => 
+          // #3
+          console.log('Hello Again')
+     )
+```
+
+### 에러 처리 방법
+
+Promise는 `catch`로 에러 헨들링을 편하게 할 수 있습니다.
+
+```js
+function getData() {
+    return new Promise((resolve, reject) => reject('failed'))
+}
+getData()
+	.then()
+	.catch((err) => console.log(err))
+```
 
 
 
 ## 4. async와 await
 
+`async`와 `await`는 `axios`를 사용할 때 많이 사용하게 됩니다.
+
+사용법은 매우 간단합니다.
+
+```js
+function apiCall() {
+	return new Promise((resolve, reject) => 
+    	$.get('http://localhost:3000', (response) => resolve(response))
+    )
+}
+
+async function getData() {
+	const response = await apiCall()
+	console.log(response)
+}
+```
+
+```js
+function sayBye() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Bye')
+            resolve()
+		}, 3000)
+    })
+}
+
+async function hello() {
+	console.log('Hello')
+    await sayBye()
+    console.log('Hello Again')
+}
+```
+
+코드에서 보시면 알겠지만 `Promise`와 `async await`는 독립된 개념이 아닙니다. `await`는 `promise`를 기다리는 역할입니다. 만약 `await`에  함수의 return `Promise`를 물려놓치 않았다면 `await`를 잘 못 사용하고 있는 것 입니다.
 
 
 
+### 예외 처리
 
+async & await에서 예외를 처리하는 방법은 `try catch`입니다.
 
+```js
+function apiCall() {
+	return new Promise((resolve, reject) => 
+    	$.get('http://localhost:3000', (response) => resolve(response))
+    )
+}
 
+async function getData() {
+    try {
+        const response = await apiCall()
+        console.log(response)
+    }
+    catch (err) {
+        console.error(err)
+    }
+}
+```
 
+## 5. Promise 응용
 
+`async & await`가 `Promise`보다 좋아보이지만 `Promise`를 써야하는 상황도 있습니다. 그런 상황을 한 번 보겠습니다.
 
+```js
+const queryExec = sql => new Promise ((resolve, reject) => {
+  con.query(sql, function (err, res) => {
+    err ? reject(err) : resolve(res) // reject는 예외 처리를 할 때 사용합니다.
+  })
+});
+(async () => {
+  try {
+    const res1 = await queryExec(sql1)
+    const res2 = await queryExec(sql2)
+    const res3 = await queryExec(sql3)
+    const res4 = await queryExec(sql4)
+    const res5 = await queryExec(sql5)
+    /* ... 최종 처리 코드 작성 ... */
+  } catch (err) {
+    console.log(err)
+  }
+})()
+```
+
+위와 같은 코드는 어떤 방식으로 처리가 될까요?
+
+첫 번째 `queryExec` 함수가 끝나게 되면 두 번째 `queryExec`가 수행됩니다. 즉, 함수가 하나씩 차례대로 수행되게 됩니다.
+
+만약 위의 5개의 함수를 동시에 수행하고 기다리는 방법은 없을까요?
+
+그걸 해결하는 하나의 대안이 제시되었었는데, ES2016에서 채택되지는 못했습니다.
+
+```js
+let [foo, bar] = await* [getFoo(), getBar()]
+```
+
+대신에 다음과 같이 사용이 가능합니다.
+
+```js
+let [foo, bar] = await Promise.all([getFoor(), getBar()])
+```
+
+`Promise.all`은 `Promise` 들의 배열을 받습니다. 그리고 그걸 다 합쳐서 하나의 `Promise`로 만듭니다.
+
+**그 하나의 Promise는 배열 안에 있는 모든 구성원 Promise 들이 resolved될 때 비로소 resolve 합니다.**
 
 ## Reference
 
@@ -124,7 +310,7 @@ console.log(getData()) // undefined
 
 * [자바스크립트 Promise 쉽게 이해하기 :: CAPTAIN PANGYO](https://joshua1988.github.io/web-development/javascript/promise-for-beginners/)
 
-* [[번역] async/await 를 사용하기 전에 promise를 이해하기 :: MEDIUM]([https://medium.com/@kiwanjung/%EB%B2%88%EC%97%AD-async-await-%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%A0%84%EC%97%90-promise%EB%A5%BC-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-955dbac2c4a4](https://medium.com/@kiwanjung/번역-async-await-를-사용하기-전에-promise를-이해하기-955dbac2c4a4))
+* [[번역] async/await 를 사용하기 전에 promise를 이해하기 :: MEDIUM](https://medium.com/@kiwanjung/번역-async-await-를-사용하기-전에-promise를-이해하기-955dbac2c4a4)
 
 * [[javascript] Promise, async, awaitf :: 개발자 황준일](http://junil-hwang.com/blog/javascript-promise-async-await/)
 
