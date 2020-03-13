@@ -224,4 +224,4 @@ Circle Chart module 제작
 
 ## Pusan National University
 
-(14.03 ~ 20.02-졸업예정) 전기컴퓨터공학부 정보컴퓨터공학전공
+(14.03 ~ 20.02) 전기컴퓨터공학부 정보컴퓨터공학전공
