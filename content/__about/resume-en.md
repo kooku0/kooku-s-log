@@ -47,8 +47,8 @@ _성장에 목이 마른 사람, 이쁜 코드를 보면 기뻐하는 사람_
 ### Chapter 소개
 
 * Cloud Service Vendors(AWS, Azure, GCP, etc..), Agile Tool Chain(Atlassian, Trello)등의 업체와 회사간의 계약
-* 계열사 프로젝트의 아키텍쳐 큐레이팅, 컨설팅
-* 프로젝트에 사용된 Cloud 등의  서비스 billing
+* 계열사 프로젝트의 아키텍쳐 큐레이팅&컨설팅
+* 계열사 프로젝트에 사용된 Third party(DB, Cloud, etc..) 서비스 billing
 
 ## LINE Financial Plus (Intern)
 
