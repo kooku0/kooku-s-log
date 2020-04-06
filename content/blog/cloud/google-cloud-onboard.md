@@ -1,10 +1,12 @@
-<div  align="right"><small>2020.04.03</small></div>
+---
+title: GOOGLE CLOUD ONBOARD SEOUL ONLINE
+date: 2020-04-06 22:04:49
+category: cloud
+---
 
 > 해당 포스팅은 3월 31, 2020 에 있었던 **Cloud OnBoard Seoul Online** 내용을 정리한 것 입니다.
 >
 > 영상링크: https://cloudonair.withgoogle.com/events/korea-cloud-onboard-online-2020
-
-![img](./images/certificate.png)
 
 # 1. GCP 소개
 
@@ -533,3 +535,7 @@ AI Platform, Cloud AutoML, BigQueryML은 Training과 Prediction을 모두 할 �
 # 마무리
 
 ![img](./images/gcp93.png)
+
+# Certification
+
+![img](./images/certificate.png)
