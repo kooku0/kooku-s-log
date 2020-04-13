@@ -1,5 +1,5 @@
 ---
-title: GOOGLE CLOUD ONBOARD SEOUL ONLINE
+title: (GCP) GOOGLE CLOUD ONBOARD SEOUL ONLINE
 date: 2020-04-06 22:04:49
 category: cloud
 ---
