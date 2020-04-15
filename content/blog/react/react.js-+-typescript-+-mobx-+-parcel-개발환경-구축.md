@@ -56,13 +56,12 @@ GitLens는 협업을 할 때 정말 필요한 기능입니다. 해당 코드 라
 
 > [Prettier](https://prettier.io/) is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
 >
-> 
 > JavaScript · TypeScript · Flow · JSX · JSON
 > CSS · SCSS · Less
 > HTML · Vue · Angular
 > GraphQL · Markdown · YAML​
->
-> \- parcel 공식문서-
+> 
+>\- parcel 공식문서-
 
 
 
@@ -70,9 +69,22 @@ Prettier는 자동으로 Code formatter을 해주는 플러그인 입니다. roo
 
 ```json
 {
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true
+  "singleQuote": true,
+  "semi": false,
+  "useTabs": false,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "printWidth": 100
 }
+```
+
+그리고 .vscode/settings.json 파일에 자동으로 포멧팅되도록 셋팅합니다.
+
+```JSON
+{
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+ }
 ```
 
 ### ESLint
