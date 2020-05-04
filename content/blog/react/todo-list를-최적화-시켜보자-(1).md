@@ -8,7 +8,7 @@ https://github.com/koomg9599/optimize-todo-list/tree/1
 
 ## 불필요한 Body의 rerender를 없애자
 
-![img](./images/t2.png)
+![img](./images/0-2.png)
 
 Header의 input만 상태만 update되었는데 Body도 rendering 된다.
 
@@ -75,7 +75,7 @@ export default Header;
 
 ### 결과
 
-![img](./images/1-1.png)
+![img](./images/0-2.png)
 
 ![img](./images/1-2.png)
 
