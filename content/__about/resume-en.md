@@ -8,7 +8,7 @@ lang: 'en'
 
 <div align="center">
 
-_성장에 목이 마른 사람, 이쁜 코드를 보면 기뻐하는 사람_
+_어제보다 나은 나_
 
 </div>
 
@@ -43,6 +43,10 @@ _성장에 목이 마른 사람, 이쁜 코드를 보면 기뻐하는 사람_
 | :----------: | :----------------------------------: |
 |  **period**  |         20.08 ~ **current**          |
 | **position** | Frontend Chapter / Frontend Engineer |
+
+## Brand site
+
+- Brand site 개발 (https://kasa.co.kr)
 
 ## Doosan Digital Innovation
 
