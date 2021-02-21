@@ -8,11 +8,52 @@ public_folder: /assets
 collections:
   - name: posts
     label: Posts
-    folder: content/blog/etc
+    delete: false
+    folder: content/blog
     create: true
     fields:
       - { name: slug, label: Slug }
       - { name: date, label: Date, widget: datetime }
-      - { name: category, label: Category }
+      - label: Categories
+        label_singular: 'Category'
+        name: 'categories'
+        widget: list
+        summary: '{{fields.category}}'
+        field:
+          label: Category
+          name: category
+          widget: relation
+          collection: 'meta'
+          file: 'categories'
+          searchFields:
+            - 'categories.*.name'
+          displayFields:
+            - 'categories.*.name'
+          valueField: 'categories.*.slug'
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+
+  - name: 'meta'
+    label: 'Meta'
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: 'categories'
+        label: 'Categories'
+        file: 'meta/categories.yml'
+        description: 'List of categories'
+        fields:
+          - name: categories
+            label: Categories
+            label_singular: 'Category'
+            widget: list
+            fields:
+              - label: 'Slug'
+                name: 'slug'
+                widget: 'string'
+                hint: 'The part of a URL identifies the category'
+              - label: 'Display Name'
+                name: 'name'
+                widget: 'string'
+                hint: 'Category name for displaying on the site'
