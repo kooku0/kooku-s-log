@@ -24,8 +24,8 @@ _어제보다 나은 나_
 
 |            |                              |
 | :--------: | :--------------------------: |
-| **GitHub** | https://github.com/koomg9599 |
-|  **Blog**  |  https://kooku.netlify.com   |
+| **GitHub** | https://github.com/kooku94 |
+|  **Blog**  |  https://kooku.netlify.app   |
 | **Email**  |       kooku@kakao.com        |
 
 # Experiences
