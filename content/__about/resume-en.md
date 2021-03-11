@@ -12,13 +12,6 @@ _어제보다 나은 나_
 
 </div>
 
-<div align="center">
-
-<img src="./images/github_profile.jpg" width="600px"/>
-
-</div>
-
-</br>
 
 **저는 `____` 하는 개발자입니다.**
 
@@ -31,8 +24,8 @@ _어제보다 나은 나_
 
 |            |                              |
 | :--------: | :--------------------------: |
-| **GitHub** | https://github.com/koomg9599 |
-|  **Blog**  |  https://kooku.netlify.com   |
+| **GitHub** | https://github.com/kooku94 |
+|  **Blog**  |  https://kooku.netlify.app   |
 | **Email**  |       kooku@kakao.com        |
 
 # Experiences
@@ -43,10 +36,19 @@ _어제보다 나은 나_
 | :----------: | :----------------------------------: |
 |  **period**  |         20.08 ~ **current**          |
 | **position** | Frontend Chapter / Frontend Engineer |
+| **Project**  | Brand-site, Web View, Operation Center|
 
-## Brand site
+### 1) Brand site 개발 ([kasa.co.kr](https://kasa.co.kr))
 
-- Brand site 개발 (https://kasa.co.kr)
+- 개발스택: Next.js, Emotion
+- 웹 호환성 & 웹 표준 준수
+
+### 2) Web View 개발
+- Event, Service Guide의 Web View 개발
+- Client 개발자와 소통하며 Scheme을 이용한 Native 기능 사용
+
+### 3) Operation Center 개발
+- 운영자가 사용하는 Operation Center 개발
 
 ## Doosan Digital Innovation
 
@@ -87,40 +89,6 @@ Lighthouse 모듈을 이용하여 웹 성능을 측정하고 기록할 수 있�
   - GitHub Webhook을 이용하여 Pull Request시 해당 Branch를 Clone -> Build -> Deploy -> Audit
   - 설정한 Threshold 값 못 넘을 시 Fail(Merge 불가)
 
-### Images
-
-<div align="center">
-  <img src="./images/measure.png"/>
-</div>
-
-<div align="center">
-
-_url 입력 시 성능과 취약한 부분 표시_
-
-</div>
-
-</br>
-<div align="center">
-  <img src="./images/history.png" width="500px"/>
-</div>
-
-<div align="center">
-
-_성능측정결과를 저장하여 그래프로 시각화_
-
-</div>
-
-</br>
-<div align="center">
-  <img src="./images/github.png"/>
-</div>
-
-<div align="center">
-
-_GitHub Repo RP 시 자동 빌드, 배포 후 성능측정 결과 표시_
-
-</div>
-
 ## 이노매틱 (Intern)
 
 |              |                       |
@@ -144,29 +112,6 @@ Ad-Tech 서비스로 가게를 등록하면 거리, 리뷰수, 메뉴, 별점, �
 - Project Manager
 - 기획
 
-#### Images
-
-<div align="center">
-  <img src="./images/store_info.png"/>
-</div>
-
-<div align="center">
-
-_가게 등록 및 경쟁사 추천_
-
-</div>
-
-</br>
-<div align="center">
-  <img src="./images/report.png" />
-</div>
-
-<div align="center">
-
-_가게, 경쟁사 데이터 수집 Report_
-
-</div>
-
 # Open Source Projects
 
 ## gatsby-starter-bee
@@ -187,48 +132,6 @@ _가게, 경쟁사 데이터 수집 Report_
 커밋 메시지를 작성하는 가이드 작성
 
 ps. +[협업할 때 사용하는 Commitlint-bot](https://kooku.netlify.com/etc/%ED%98%91%EC%97%85%ED%95%A0%20%EB%95%8C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-commitlint-bot/)
-
-## Node.js(TypeScript) Template Code
-
-- GitHub Repository link: https://github.com/koomg9599/TypeScript-Node.js-Template
-- Winston, ExpressJS, TypeScript
-
-TypeScript로 Node.js Server를 구축하는 템플릿 코드
-
-## Auto-Complete module
-
-- GitHub Repository link: https://github.com/koomg9599/auto-complete
-- React(hooks)
-
-React Hook을 이용하여 Auto-Complete module 제작
-
-## Alert module
-
-- GitHub Repository link: https://github.com/koomg9599/react-alert-library
-- React(hooks), Redux, CSS
-
-React Hook을 이용하여 Alert module 제작
-
-## Request module
-
-- GitHub Repository link: https://github.com/koomg9599/react-alert-library
-- TypeScript, React
-
-TypeScript를 이용하여 request 모듈을 제작. axios등 라이브러리들은 사용하지 않고 XMLHttpRequest만 사용
-
-## HLS Audio Downstream server
-
-- GitHub Repository link: https://github.com/koomg9599/HlsAudioDownstream
-- ExpressJS
-
-HLS 프로토콜을 이용한 Audio Downstream Node 서버 제작
-
-## Circle Chart module
-
-- GitHub Repository link: https://github.com/koomg9599/circle-chart-react-hooks
-- React(hooks)
-
-Circle Chart module 제작
 
 # Education
 
