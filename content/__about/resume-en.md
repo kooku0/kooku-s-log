@@ -6,49 +6,42 @@ lang: 'en'
 
 # 구민규 (Kooku)
 
-<div align="center">
+새로운 피처를 개발할 때 추가하거나 변경하는 코드을 최소화할 수 있는 아키텍처를 설계하고, Web 표준, 브라우저, JS, React의 원리를 파악하여 퍼포먼스를 향상시키는 것에 관심을 가지고 있습니다.
+브랜드 사이트, WebView, Operation-Center를 React.js, Vue.js, TypeScript, Next.js로 개발한 경험을 보유하고 있습니다.
 
-_어제보다 나은 나_
+|            |                               |
+| :--------: | :---------------------------: |
+| **GitHub** |  https://github.com/kooku94   |
+|  **Blog**  | https://kooku-log.netlify.app |
+| **Email**  |        kooku@kakao.com        |
 
-</div>
-
-
-**저는 `____` 하는 개발자입니다.**
-
-1. 좋은 코드와 설계를 고민하는
-2. 성장하기 위해 노력하는
-3. 배우는 것을 좋아하는
-4. 대화하며 발전해나가는 것을 좋아하는
-5. 기억보다는 기록을 하는
-6. 효율적인 것을 좋아하는
-
-|            |                              |
-| :--------: | :--------------------------: |
-| **GitHub** | https://github.com/kooku94 |
-|  **Blog**  |  https://kooku.netlify.app   |
-| **Email**  |       kooku@kakao.com        |
-
-# Experiences
+# 경력
 
 ## KASA
 
-|              |                                      |
-| :----------: | :----------------------------------: |
-|  **period**  |         20.08 ~ **current**          |
-| **position** | Frontend Chapter / Frontend Engineer |
-| **Project**  | Brand-site, Web View, Operation Center|
+|              |                                        |
+| :----------: | :------------------------------------: |
+|  **period**  |          20.08 ~ **current**           |
+| **position** |  Frontend Chapter / Frontend Engineer  |
+| **Project**  | Brand-site, Web View, Operation Center |
 
-### 1) Brand site 개발 ([kasa.co.kr](https://kasa.co.kr))
+### 1) Brand site
 
-- 개발스택: Next.js, Emotion
-- 웹 호환성 & 웹 표준 준수
+- **주요내용**<br/>
+  Vue.js 를 Next.js로 프레임워크 변경, 앱 출시를 위한 브랜드 사이트 개편
+- **본인이 공헌한 점**<br/>
+  프레임워크 변경, 프로젝트 환경 셋팅, Performance & SEO
+- **사용한 Skill 또는 지식**<br/>
+  Next.js, Fast load times을 위한 Image Optimize, Lazy-load, Optimize JavaScript & Images & third-party resource 방법적용. SEO를 향상시키기 위한 웹 표준 적용.
+- **결과/성과**<br/>
+  Lighthouse Performance 7 -> 74, Best-Practices: 86 -> 100, SEO: 79 -> 92
 
-### 2) Web View 개발
-- Event, Service Guide의 Web View 개발
-- Client 개발자와 소통하며 Scheme을 이용한 Native 기능 사용
+### 2) Media Tab - Web View
 
-### 3) Operation Center 개발
-- 운영자가 사용하는 Operation Center 개발
+- **주요내용**<br/> 카사앱 내 WebView 개발
+
+- **본인이 공헌한 점**<br/> CMS-tools를 이용하여 컨텐츠매니저가 컨텐츠 추가 & 수정 & Staging배포 & Production배포까지 진행할 수 있는 Pipeline 설계, 프로젝트 초기셋팅, IOS & Android WebView, Web 모두 지원가능한 Application 개발
+- **사용한 Skill 또는 지식**<br/> React.js, Safari & Chrome & WebView에서 모두 호환가능한 웹 표준 과 CSS Style. 웹이지만 앱과 같은 사용자 경험을 겪을 수 있는 Performance & 자연스러운 Animation.
 
 ## Doosan Digital Innovation
 
@@ -56,8 +49,6 @@ _어제보다 나은 나_
 | :----------: | :-------------------------------------------: |
 |  **period**  |                 19.12 ~ 20.07                 |
 | **position** | Digital Dev Platform Chapter / Cloud Engineer |
-
-### Chapter 소개
 
 - Cloud Service Vendors(AWS, Azure, GCP, etc..), Agile Tool Chain(Atlassian, Trello)등의 업체와 회사간의 계약
 - 계열사 프로젝트의 아키텍쳐 큐레이팅&컨설팅
@@ -73,46 +64,19 @@ _어제보다 나은 나_
 
 ### 웹 성능 측정 서비스 (Front-End, Back-End 개발)
 
-Lighthouse 모듈을 이용하여 웹 성능을 측정하고 기록할 수 있으며, CI 서버로도 사용할 수 있는 웹 서비스.
-
-- 19.07 ~ 19.08 (2m)
-- TypeScript, React(hooks), Redux, Express.js
-
-#### Description
-
-- 프로젝트 초기 React + TypeScript Application Architecture 설계
-- Node.js + TypeScript Architecture 설계
-- History, My Page, Report
-- ChartJS를 이용한 점수 시각화
-- OAuth 2
-- 자체 CI서버 구축(+GitHub Bot)
-  - GitHub Webhook을 이용하여 Pull Request시 해당 Branch를 Clone -> Build -> Deploy -> Audit
-  - 설정한 Threshold 값 못 넘을 시 Fail(Merge 불가)
-
-## 이노매틱 (Intern)
-
-|              |                       |
-| :----------: | --------------------- |
-|  **period**  | 18.12 ~ 19.06 (6m)    |
-| **position** | 개발 / Front-End      |
-| **Projects** | Ad-Tech (Mr. Doochie) |
-
-### 미스터 두치 (Front-End 개발 담당, PM)
-
-Ad-Tech 서비스로 가게를 등록하면 거리, 리뷰수, 메뉴, 별점, 가격 등 여러가지 항목을 통해 경쟁사를 추천. 네이버, 페이스북, 인스타그램에서 관련 검색어 상위노출 여부, 포스팅 수, 리뷰 수 등의 정보를 가져와 시각화한 후 Reporting.
-
-- 18.12 ~ 19.06 (6m)
-- React, Redux
-
-#### Description
-
-- 프로젝트 초기 React Application Architecture 설계
-- 경쟁사 추천 알고리즘 제작
-- ChartJS를 이용한 Reporting 시각화
-- Project Manager
-- 기획
+- **주요내용**<br/> 웹 성능을 측정하고 기록할 수 있는 웹 서비스 개발, 자동으로 웹 성능을 측정할 수 있는 CI GitHub App 개발
+- **본인이 공헌한 점**<br/> Express.js 로 CI Server 개발. Lighthouse Node Module을 이용하여 웹 성능을 측정할 수 있는 Custom 모듈 개발. 웹 성능을 측정하고 그래프로 history를 볼 수 있는 웹 사이트 개발.
+- **사용한 Skill 또는 지식**<br/> React.js, Redux, TypeScript
 
 # Open Source Projects
+
+## Static Site Blog - Netlify CMS
+
+- Blog link: https://kooku-log.netlify.app/
+- GitHub Repository link: https://github.com/kooku94/kooku-log
+- Next.js, Emotion, Netlify-CMS
+
+Next.js 와 Netlify CMS 를 이용한 Static Site Blog
 
 ## gatsby-starter-bee
 
