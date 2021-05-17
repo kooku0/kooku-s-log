@@ -43,6 +43,13 @@ lang: 'en'
 - **본인이 공헌한 점**<br/> CMS-tools를 이용하여 컨텐츠매니저가 컨텐츠 추가 & 수정 & Staging배포 & Production배포까지 진행할 수 있는 Pipeline 설계, 프로젝트 초기셋팅, IOS & Android WebView, Web 모두 지원가능한 Application 개발
 - **사용한 Skill 또는 지식**<br/> React.js, Safari & Chrome & WebView에서 모두 호환가능한 웹 표준 과 CSS Style. 웹이지만 앱과 같은 사용자 경험을 겪을 수 있는 Performance & 자연스러운 Animation.
 
+### 3) Open api web
+
+- **주요내용**<br/> DABS 거래를 위한 Open-Api Key를 발급받고 관리할 수 있는 웹 개발
+
+- **본인이 공헌한 점**<br/> Project scaffolding, AWS S3 & Cloudfront infra setting, 웹 개발
+- **사용한 Skill 또는 지식**<br/> React.js, Redux
+
 ## Doosan Digital Innovation
 
 |              |                                               |
