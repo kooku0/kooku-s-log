@@ -91,7 +91,16 @@ module.exports = {
         enableIdentityWidget: false,
       },
     },
-    `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-plugin-web-vitals',
+      options: {
+        trackingId: 'UA-142715388-1',
+        metrics: [`FID`, `TTFB`, `LCP`, `CLS`, `FCP`],
+        eventCategory: 'Performance',
+        includeInDevelopment: false,
+        debug: false,
+      },
+    }`gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
