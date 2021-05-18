@@ -94,7 +94,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-web-vitals',
       options: {
-        trackingId: 'UA-142715388-1',
+        trackingId: '197453936',
         metrics: [`FID`, `TTFB`, `LCP`, `CLS`, `FCP`],
         eventCategory: 'Performance',
         includeInDevelopment: false,
